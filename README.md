@@ -360,6 +360,11 @@ The JSON and Markdown files intentionally overlap. Markdown explains the setup
 for a person; JSON stores the same critical facts in a form that can be checked
 by code.
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development and test instructions,
+and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for community guidelines.
+
 ## License
 
 UnStep is licensed under [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](LICENSE).

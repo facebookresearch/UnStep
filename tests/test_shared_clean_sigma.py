@@ -1,3 +1,9 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
 """Check input/output clean sigma against upstream SF without loading a model.
 
 Run: python -m unittest discover -s tests -p 'test_shared_clean_sigma.py' -v
