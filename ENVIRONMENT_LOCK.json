@@ -1,0 +1,91 @@
+{
+  "purpose": "H100 generation stack for UnStep speed probes and full-946 paper generation.",
+  "hardware": {
+    "gpu": "NVIDIA H100",
+    "capability": [
+      9,
+      0
+    ]
+  },
+  "python": {
+    "version": "3.12.14",
+    "build": "Anaconda"
+  },
+  "torch": {
+    "version": "2.15.0a0+git65cd5f0",
+    "source_commit": "65cd5f09ea45cf4c7e55821b840e2bbaf45a7ec5",
+    "wheel_sha256": "54c6c4cb23ed41b41a0387cb617272d0b24999d07e82bc6918a0557d8a937bbb"
+  },
+  "torch_build_dependencies": {
+    "build": "1.6.0",
+    "cmake": "4.4.3",
+    "ninja": "1.13.2",
+    "numpy": "2.5.2",
+    "packaging": "26.3",
+    "pip": "26.2.1",
+    "scikit-build-core": "1.0.3",
+    "setuptools": "81.0.0",
+    "typing_extensions": "4.16.0",
+    "wheel": "0.48.0"
+  },
+  "cuda": {
+    "torch_cuda": "13.3",
+    "toolkit": "13.3.1",
+    "runtime": "13.3.29",
+    "nvcc": "13.3.73",
+    "nvrtc": "13.3.33",
+    "cudnn_runtime": "9.25.1"
+  },
+  "triton": {
+    "version": "3.8.0+gitdf3f91dd"
+  },
+  "torchvision": {
+    "version": "0.30.0.dev20260906+cu134"
+  },
+  "flash_attention": {
+    "backend": "h100",
+    "module_flash_attn_interface": true,
+    "module_flash_attn_3": true,
+    "fa3_extension_sha256": "217bce6218eda0a5665b29efe7ef0bdb64584089c1c9703a20368bdaae4584b1"
+  },
+  "required_runtime_overrides": {
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "torch.backends.cudnn.benchmark": true,
+    "torch.backends.cudnn.benchmark_limit": 32,
+    "torch._dynamo.config.recompile_limit": 64,
+    "torch._dynamo.config.accumulated_recompile_limit": 1024,
+    "torch._inductor.config._use_fp64_for_unbacked_floats": false,
+    "TORCHINDUCTOR_COMPILE_THREADS": "32",
+    "TORCHINDUCTOR_FX_GRAPH_REMOTE_CACHE": "0",
+    "TORCHINDUCTOR_AUTOTUNE_REMOTE_CACHE": "0",
+    "TORCHINDUCTOR_BUNDLED_AUTOTUNE_REMOTE_CACHE": "0",
+    "TRITON_REMOTE_CACHE_ENABLE": "0",
+    "full946_output_isolation": "run_h100_full946_generation.sh refuses existing output directories unless UNSTEP_OVERWRITE_OUTPUT=1 and recreates per-shard work directories"
+  },
+  "source_hashes": {
+    "runtime/sitecustomize.py": "d22f05916bd4c4daf384b2b228dbf7daa26ee9f8f15aba42602df89d2f31b328",
+    "scripts/install_detectron2_for_vbench.sh": "a6801a0c72aff7bf50e2a5b3bf469753c8d2f1a834cc8fc4b67a0611ff723cbf",
+    "scripts/merge_vbench_scores.py": "0b51c2031d59197cb59961ea3dbd35dc9e1b2019967ed33f60cfccc0ecfa6b5d",
+    "scripts/run_h100_full946_generation.sh": "5bd281b76c20c5fa6c78cf4956985da56737b5ac1b70ac1a65d24776a410fee3",
+    "scripts/run_h100_speed_probe.sh": "1529e7ca4a369535960ea358115bcfce6f7e012a04627d16d80ea580912ff962",
+    "scripts/run_vbench_score.sh": "733383180d8ade86bf1ab725915f4e312f5c9598e917409002f56c01c5ea12fb",
+    "scripts/vbench_eval_entry.py": "0199491573101901cc28c44e56213f1eeb20f732a2965fe193c4fdd146b08ba3",
+    "tests/test_clean_sigma.py": "cb8b443d2ddfbe743bd1625fa955b04c3435c55ec7b1da281942945cf2ded983",
+    "tests/test_shared_clean_sigma.py": "97bfe5d4e9f41f6e0572e1cd6c72f5fe24fd32501f08290e228e3917f2383392",
+    "unstep/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "unstep/clean_sigma.py": "42f5ac9ad9752c41206c586220ed7e72e5a8f9233fb304936170831fa762fc39",
+    "unstep/run_wrapper_generation.py": "68ce3faa542188c3740a48c21793351043748d83231531f0c3098a604c5b2fd0",
+    "unstep/wrapper.py": "eb096ca5e93a7898754cbc168d68f6fd679a9cf09bc6ae4ee3c06fbd08f9905c",
+    "unstep/wrapper_runtime.py": "735904e7a145c2527f8af353f6bb44653c568ae5ee065fa26edc7a6d5832bc2f"
+  },
+  "clean_sigma": {
+    "default": 0.02,
+    "applies_to": [
+      "input_renoising",
+      "flow_to_x0"
+    ],
+    "conditioning_timestep": 0,
+    "scheduler_shift": 5
+  }
+}
