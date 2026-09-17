@@ -359,3 +359,8 @@ Use them to audit that a local setup matches the validated setup.
 The JSON and Markdown files intentionally overlap. Markdown explains the setup
 for a person; JSON stores the same critical facts in a form that can be checked
 by code.
+
+## License
+
+UnStep is licensed under [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](LICENSE).
+Third-party dependencies and model weights retain their own licenses.

@@ -7,6 +7,8 @@ name = "unstep"
 version = "0.1.0"
 description = "Training-free inference wrapper for few-step causal video generation."
 requires-python = ">=3.12,<3.13"
+license = "CC-BY-NC-4.0"
+license-files = ["LICENSE"]
 
 [tool.setuptools.packages.find]
 include = ["unstep*"]
