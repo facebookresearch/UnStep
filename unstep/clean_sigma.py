@@ -3,6 +3,9 @@
 #
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
+#
+# Adapts Self Forcing's scheduler method at runtime (Apache-2.0).
+# See THIRD_PARTY_NOTICES.md for attribution and upstream license details.
 
 """Apply the clean-sigma override to input re-noising at conditioning t=0.
 

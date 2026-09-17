@@ -360,6 +360,16 @@ The JSON and Markdown files intentionally overlap. Markdown explains the setup
 for a person; JSON stores the same critical facts in a form that can be checked
 by code.
 
+## Acknowledgments
+
+UnStep builds on [Self Forcing](https://github.com/guandeh17/Self-Forcing),
+including its inference pipeline, scheduler, and Wan2.1 model implementation.
+Our runtime code adapts parts of that implementation. We use
+[VBench](https://github.com/Vchitect/VBench) for evaluation, including its
+prompt definitions, score normalization, and aggregation. We thank the authors
+of these projects for releasing their code and models. See
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for code attribution and licenses.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for development and test instructions,

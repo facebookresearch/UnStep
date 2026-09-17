@@ -4,6 +4,9 @@
 #
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
+#
+# Score definitions and aggregation adapted from VBench (Apache-2.0).
+# Adaptations by the UnStep authors. See THIRD_PARTY_NOTICES.md.
 
 import json
 import sys
