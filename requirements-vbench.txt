@@ -1,0 +1,36 @@
+# VBench scoring dependencies that are not part of the generation runtime.
+# Install these into a separate scoring overlay with:
+#   python -m pip install --target .vbench_deps -r requirements-vbench.txt
+#
+# Keep PyTorch/Torchvision/Triton from the H100 generation environment; do not
+# install a second torch wheel through VBench. The scorer entrypoint provides a
+# small compatibility shim for VBench's older transformers import locations.
+
+Cython==3.3.0
+boto3==1.42.1
+botocore==1.42.1
+cloudpickle==3.1.2
+Pillow==12.3.0
+PyYAML==6.0.3
+fairscale==0.4.13
+fvcore==0.1.5.post20221221
+iopath==0.1.10
+jmespath==1.0.1
+lvis==0.5.3
+matplotlib==3.11.1
+numpy==2.2.6
+openai-clip==1.0.1
+opencv-python-headless==4.12.0.88
+packaging==26.3
+pandas==2.3.2
+pycocoevalcap==1.2
+pycocotools==2.0.11
+pyiqa==0.1.14.1
+scikit-image==0.25.2
+scipy==1.18.1
+s3transfer==0.16.0
+tabulate==0.10.0
+termcolor==3.3.0
+timm==0.6.13
+transformers==4.57.1
+yacs==0.1.8

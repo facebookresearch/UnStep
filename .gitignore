@@ -1,0 +1,17 @@
+# Local environments and builds
+.venv/
+.build/
+.runtime_state/
+build/
+dist/
+*.egg-info/
+
+# Run outputs
+results/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Local benchmark/source/model assets are supplied separately.
+assets/

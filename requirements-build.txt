@@ -1,0 +1,13 @@
+# Build dependencies used for the verified PyTorch source build.
+# Install these in the fresh Python 3.12.14 environment before building torch.
+
+build==1.6.0
+cmake==4.4.3
+ninja==1.13.2
+numpy==2.5.2
+packaging==26.3
+pip==26.2.1
+scikit-build-core==1.0.3
+setuptools==81.0.0
+typing_extensions==4.16.0
+wheel==0.48.0
