@@ -69,8 +69,8 @@ For reproducibility, build PyTorch from the full source commit
    `65cd5f09ea45cf4c7e55821b840e2bbaf45a7ec5`.
 5. Install generation dependencies from `requirements-generation.txt`.
 6. Install this package with `python -m pip install -e .`.
-7. Install/build the FA3 overlay against the same Python/Torch/CUDA
-   stack.
+7. Build FA3 from the pinned public source and flags in
+   [SETUP_H100.md](SETUP_H100.md), using the same Python/Torch/CUDA stack.
 8. Run the import/runtime check in `SETUP_H100.md`.
 9. Run `scripts/run_h100_speed_probe.sh`.
 10. Run `scripts/run_h100_full946_generation.sh`.
