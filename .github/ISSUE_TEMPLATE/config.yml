@@ -1,0 +1,11 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://bugbounty.meta.com/
+    about: Report security vulnerabilities through Meta's disclosure program.

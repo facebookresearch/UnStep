@@ -1,0 +1,20 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unstep"
+version = "0.1.0"
+description = "Training-free inference wrapper for few-step causal video generation."
+requires-python = ">=3.12,<3.13"
+license = "CC-BY-NC-4.0"
+license-files = ["LICENSE", "LICENSES/Apache-2.0.txt", "THIRD_PARTY_NOTICES.md"]
+
+[tool.setuptools.packages.find]
+include = ["unstep*"]

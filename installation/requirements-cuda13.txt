@@ -1,0 +1,22 @@
+# NVIDIA CUDA 13.3 packages for building and running generation.
+# After installation, source installation/cuda_wheels.sh in the active venv.
+# A system CUDA 13.3 + cuDNN 9.25.1 development install can be used instead.
+
+cuda-toolkit==13.3.1
+nvidia-cuda-runtime==13.3.29
+nvidia-cuda-nvrtc==13.3.33
+nvidia-cuda-nvcc==13.3.73
+nvidia-cuda-cccl==13.3.3.4.1
+nvidia-cuda-crt==13.3.73
+nvidia-cuda-cupti==13.3.75
+nvidia-cublas==13.5.1.27
+nvidia-cudnn-cu13==9.25.1.1
+nvidia-cufft==12.3.0.29
+nvidia-curand==10.4.3.29
+nvidia-cusolver==12.2.2.18
+nvidia-cusparse==12.8.1.7
+nvidia-cusparselt-cu13==0.8.1
+nvidia-nccl-cu13==2.30.7
+nvidia-nvshmem-cu13==3.4.5
+nvidia-nvjitlink==13.3.33
+nvidia-nvvm==13.3.73
