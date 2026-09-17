@@ -1,8 +1,8 @@
 # VBench scoring dependencies that are not part of the generation runtime.
 # Install these into a separate scoring overlay with:
-#   python -m pip install --target .vbench_deps -r requirements-vbench.txt
+#   python -m pip install --target .vbench_deps -r evaluation/requirements.txt
 #
-# Keep PyTorch/Torchvision/Triton from the H100 generation environment; do not
+# Keep PyTorch/Torchvision/Triton from the generation environment; do not
 # install a second torch wheel through VBench. The scorer entrypoint provides a
 # small compatibility shim for VBench's older transformers import locations.
 

@@ -15,7 +15,7 @@ We actively welcome your pull requests.
 1. Fork the repo and create your branch from `main`.
 2. If you've added code that should be tested, add tests.
 3. If you've changed APIs, update the documentation.
-4. Ensure the test suite and syntax checks below pass.
+4. Ensure the [test suite and syntax checks](tests/) pass.
 5. Follow the existing code style.
 6. If you haven't already, complete the Contributor License Agreement ("CLA").
 
@@ -37,30 +37,7 @@ outlined on that page and do not file a public issue.
 
 ## Tests
 
-The arithmetic tests run on CPU without model weights or CUDA. Use Python 3.12
-and public dependencies:
-
-```bash
-python3.12 -m venv .venv
-. .venv/bin/activate
-python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
-python -m pip install -e .
-mkdir -p assets/source
-git clone https://github.com/guandeh17/Self-Forcing.git assets/source/Self-Forcing-main
-python -m unittest discover -s tests -v
-python -m compileall -q unstep runtime scripts tests
-for script in scripts/*.sh; do bash -n "$script"; done
-```
-
-If Self Forcing is already checked out elsewhere, set `UNSTEP_SOURCE_URI` to
-that directory instead of cloning it again. The tests check that the clean-cache
-noise override is applied to both input re-noising and the emitted prediction,
-while preserving nonzero denoising steps and random-number consumption. The CUDA
-compilation test is skipped on CPU.
-
-For generation, GPU validation, and performance measurements, use the full
-environment in [SETUP_H100.md](SETUP_H100.md). The CPU CI environment does not
-reproduce H100 throughput.
+See [tests](tests/) for setup, unit tests, and syntax checks.
 
 ## Coding Style
 

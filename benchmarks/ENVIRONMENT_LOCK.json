@@ -1,5 +1,5 @@
 {
-  "purpose": "H100 generation stack for UnStep speed probes and full-946 paper generation.",
+  "purpose": "Reference environment for UnStep speed probes and full-946 generation.",
   "hardware": {
     "gpu": "NVIDIA H100",
     "capability": [
@@ -43,7 +43,7 @@
     "version": "0.30.0.dev20260906+cu134"
   },
   "flash_attention": {
-    "backend": "h100",
+    "backend": "auto",
     "module_flash_attn_interface": true,
     "module_flash_attn_3": true,
     "fa3_extension_sha256": "217bce6218eda0a5665b29efe7ef0bdb64584089c1c9703a20368bdaae4584b1",
@@ -87,22 +87,22 @@
     "TORCHINDUCTOR_AUTOTUNE_REMOTE_CACHE": "0",
     "TORCHINDUCTOR_BUNDLED_AUTOTUNE_REMOTE_CACHE": "0",
     "TRITON_REMOTE_CACHE_ENABLE": "0",
-    "full946_output_isolation": "run_h100_full946_generation.sh refuses existing output directories unless UNSTEP_OVERWRITE_OUTPUT=1 and recreates per-shard work directories"
+    "full946_output_isolation": "generation/run.sh refuses existing output directories unless UNSTEP_OVERWRITE_OUTPUT=1 and recreates per-shard work directories"
   },
   "source_hashes": {
-    "runtime/sitecustomize.py": "9b331828e8f38770006ce2269daddbefa95fd055449fa28800eee66713df931b",
-    "scripts/install_detectron2_for_vbench.sh": "9a1dd1e0439f7ae8815a3a298169a6aa0a7bcdcbbdeb4ba317c2cff8a9400a61",
-    "scripts/merge_vbench_scores.py": "e05f3423693dd36bbfe8c74e9b7cb29706ad872108c3a55d2a48fcc4262332b6",
-    "scripts/run_h100_full946_generation.sh": "1dc9d403fe3ab308989775f479a45dde4793d2e1ef08a456945cd0a4f182fc23",
-    "scripts/run_h100_speed_probe.sh": "c97212237c6d2286445f97ed152e9e810ca38311273d5e25b88199612512783a",
-    "scripts/run_vbench_score.sh": "a38ecde30a356fdd1398853d39b69056f7172205f2c27836f087e44c37196766",
-    "scripts/vbench_eval_entry.py": "0f7c1037b3feeb568935f4fa9a91cd464a2c5f7dc72ac96791636436bba4bfe1",
+    "runtime/sitecustomize.py": "e9b8f64fc326d0e362f44e2450261b07f6879598b44d58da1b291470fa383f21",
+    "evaluation/install_detectron2.sh": "9a1dd1e0439f7ae8815a3a298169a6aa0a7bcdcbbdeb4ba317c2cff8a9400a61",
+    "evaluation/merge_vbench_scores.py": "e05f3423693dd36bbfe8c74e9b7cb29706ad872108c3a55d2a48fcc4262332b6",
+    "generation/run.sh": "0a32cd5ea4ea95189945cf6eac15c1d7a35dc46171f1fa2ecd938f271b2e142c",
+    "benchmarks/run_speed_probe.sh": "9ee1911bba99f186eb5f8d9360ea9d68191a84a32bcc1e12fca2c468e410eb0f",
+    "evaluation/run.sh": "a38ecde30a356fdd1398853d39b69056f7172205f2c27836f087e44c37196766",
+    "evaluation/vbench_eval_entry.py": "0f7c1037b3feeb568935f4fa9a91cd464a2c5f7dc72ac96791636436bba4bfe1",
     "tests/test_clean_sigma.py": "f1e322d6948df58a6f669f15a6ccf13dcba109e76a444d34c1864afe87361aa7",
     "tests/test_shared_clean_sigma.py": "87d0b3896d14ea7a728fb2a5480cd8fb07b94da9fd35525fffce48cc1543f0f5",
     "unstep/__init__.py": "3cb62676c3fad403516673b2e99cdb6cbc0b71f814c3bb7f551bfa1e8495e062",
     "unstep/clean_sigma.py": "c233f01067b96a0cc2ec2f77b67121132c61f25c493ea5cd4dac6574c9d4ca0a",
     "unstep/run_wrapper_generation.py": "3430acf3f632b7be56dc3c761b23de6cac93d7d4411852fafa6cc1db652b44d5",
-    "unstep/wrapper.py": "265be17957af6e8be835d7808904eb628e921130087d580affec5ae24d81884f",
+    "unstep/wrapper.py": "bd1189bd4c8913437b39cf8fdb00c690ff8346c7becc4bbb71e4901f46d68eca",
     "unstep/wrapper_runtime.py": "30d5d46a62b998c018fc145868b6c804345b18e1598fea99b6b42332b7aecd3a"
   },
   "clean_sigma": {

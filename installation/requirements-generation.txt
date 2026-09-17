@@ -1,6 +1,6 @@
-# Non-torch Python dependencies for the H100 generation environment.
+# Non-torch Python dependencies for the generation environment.
 # Install PyTorch/Triton/torchvision from the exact source/wheel stack in
-# SETUP_H100.md before installing this file.
+# installation/README.md before installing this file.
 
 accelerate==1.10.1
 antlr4-python3-runtime==4.9.3

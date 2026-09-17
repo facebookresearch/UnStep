@@ -26,10 +26,10 @@ in the upstream source tree.
 [VBench](https://github.com/Vchitect/VBench) provides the benchmark prompts and
 evaluation code. The default source location is `assets/source/VBench`.
 
-`scripts/merge_vbench_scores.py` uses the dimension weights, normalization
+`evaluation/merge_vbench_scores.py` uses the dimension weights, normalization
 constants, and score aggregation from VBench's `scripts/constant.py` and
 `scripts/cal_final_score.py`, adapted to merge results from separate scoring
-runs. The evaluation entry point in `scripts/vbench_eval_entry.py` adds
+runs. The evaluation entry point in `evaluation/vbench_eval_entry.py` adds
 compatibility helpers around the upstream evaluator.
 
 VBench's top-level code is distributed under the Apache License 2.0. Its

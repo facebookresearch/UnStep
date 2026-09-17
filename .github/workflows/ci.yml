@@ -49,8 +49,8 @@ jobs:
 
       - name: Check Python and shell syntax
         run: |
-          python -m compileall -q unstep runtime scripts tests
-          for script in scripts/*.sh; do bash -n "$script"; done
+          python -m compileall -q unstep runtime evaluation tests
+          for script in generation/*.sh evaluation/*.sh benchmarks/*.sh; do bash -n "$script"; done
 
       - name: Test clean-cache input and output arithmetic
         run: python -m unittest discover -s tests -v

@@ -29,7 +29,7 @@ from unstep.clean_sigma import install_shared_clean_sigma
 class WrapperConfig:
     """Current confirmed offline wrapper settings.
 
-    The default config is the validated H100 two-step T2V setting.
+    The default config is the two-step T2V setting.
     """
 
     base: runtime.BaseSFConfig = field(default_factory=runtime.BaseSFConfig)
@@ -306,7 +306,7 @@ class OfflineSelfForcingWrapper:
         method_transformer: Any,
         device: torch.device,
     ) -> None:
-        """Install the quality-preserving runtime stack used by the 47 FPS keeper."""
+        """Install the quality-preserving runtime stack."""
 
         cfg = self.config
         torch.backends.cudnn.benchmark = True

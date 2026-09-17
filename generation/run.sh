@@ -10,7 +10,7 @@ set -euo pipefail
 # Default production full-946 generation launcher.
 #
 # Usage:
-#   ./scripts/run_h100_full946_generation.sh RUN_NAME
+#   ./generation/run.sh RUN_NAME
 #
 # Required external inputs:
 #   UNSTEP_PYENV        Python 3.12.14 env with PyTorch 2.15/CUDA 13.3
@@ -74,8 +74,8 @@ LOG_DIR="$OUT_DIR/generation_logs"
 RUNTIME_STATE_DIR="$OUT_DIR/runtime_state"
 CACHE_MODE="${UNSTEP_CACHE_MODE:-isolated}"
 CACHE_SCOPE="${UNSTEP_CACHE_SCOPE:-run_gpu}"
-SHARED_RUNTIME_STATE_DIR="${UNSTEP_SHARED_RUNTIME_STATE_DIR:-$REPO_ROOT/.runtime_state/h100_full946_generation}"
-SHARED_WORK_ROOT="${UNSTEP_WORK_ROOT:-/tmp/unstep_h100_full946_generation}"
+SHARED_RUNTIME_STATE_DIR="${UNSTEP_SHARED_RUNTIME_STATE_DIR:-$REPO_ROOT/.runtime_state/full946_generation}"
+SHARED_WORK_ROOT="${UNSTEP_WORK_ROOT:-/tmp/unstep_full946_generation}"
 
 case "$CACHE_MODE" in
   shared|isolated) ;;
@@ -161,7 +161,7 @@ COMMON_ARGS=(
     --shard-mode contiguous
     --seed-mode sequential_global
     --rng-skip-mode initial_only
-    --fa3-import-backend h100
+    --fa3-import-backend auto
     --source-uri "$SOURCE_URI"
     --weights-uri "$WEIGHTS_URI"
     --vae-uri "$VAE_URI"
@@ -245,7 +245,7 @@ launch_shard() {
       TORCHINDUCTOR_AUTOTUNE_REMOTE_CACHE=0 \
       TORCHINDUCTOR_BUNDLED_AUTOTUNE_REMOTE_CACHE=0 \
       TRITON_REMOTE_CACHE_ENABLE=0 \
-      TORCH_COMPILE_CACHE_KEY_TAG="unstep_h100_full946_shard${shard}" \
+      TORCH_COMPILE_CACHE_KEY_TAG="unstep_full946_shard${shard}" \
       TORCHINDUCTOR_COMPILE_THREADS="$TORCHINDUCTOR_COMPILE_THREADS" \
       TORCHINDUCTOR_CPP_CACHE_PRECOMPILE_HEADERS=0 \
     )

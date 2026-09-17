@@ -7,10 +7,10 @@
 
 set -euo pipefail
 
-# Default one-H100 speed probe for the production configuration.
+# Default single-GPU speed probe for the production configuration.
 #
 # Usage:
-#   ./scripts/run_h100_speed_probe.sh RUN_NAME
+#   ./benchmarks/run_speed_probe.sh RUN_NAME
 #
 # The default method setting matches the full-946 launcher:
 #   --clean-sigma-override 0.02
@@ -18,7 +18,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-RUN="${1:-H100_SPEED_PROBE_$(date +%Y%m%d_%H%M%S)}"
+RUN="${1:-unstep_speed_$(date +%Y%m%d_%H%M%S)}"
 PROMPT_INDICES="${PROMPT_INDICES:-0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19}"
 WARMUP_PROMPT_INDICES="${WARMUP_PROMPT_INDICES:-$PROMPT_INDICES}"
 WARMUP_REPEATS="${WARMUP_REPEATS:-1}"
@@ -45,7 +45,7 @@ PROMPT_URI="${UNSTEP_PROMPT_URI:-$ASSETS_ROOT/data/vbench_all_dimension_extended
 
 if [ ! -x "$PYENV/bin/python" ]; then
   echo "Missing Python env: $PYENV/bin/python" >&2
-  echo "Set UNSTEP_PYENV or create .venv from SETUP_H100.md." >&2
+  echo "Set UNSTEP_PYENV or create .venv from installation/README.md." >&2
   exit 2
 fi
 
@@ -57,7 +57,7 @@ fi
 OUT_DIR="${UNSTEP_OUT_DIR:-$REPO_ROOT/results/$RUN}"
 RUN_STATE_ROOT="${UNSTEP_RUN_STATE_ROOT:-$OUT_DIR/runtime_state}"
 CACHE="$RUN_STATE_ROOT/cache"
-WORK_ROOT="${UNSTEP_WORK_ROOT:-$TMP_ROOT/unstep_h100_speed_probe_stage}"
+WORK_ROOT="${UNSTEP_WORK_ROOT:-$TMP_ROOT/unstep_speed_probe_stage}"
 OUT_JSON="$OUT_DIR/${RUN}.json"
 LOG="$OUT_DIR/${RUN}.log"
 
@@ -142,7 +142,7 @@ COMMON_ENV=(
   TORCHINDUCTOR_COMPILE_THREADS="$TORCHINDUCTOR_COMPILE_THREADS"
   TORCHINDUCTOR_CPP_CACHE_PRECOMPILE_HEADERS=0
   TRITON_REMOTE_CACHE_ENABLE=0
-  TORCH_COMPILE_CACHE_KEY_TAG="unstep_h100_speed_probe"
+  TORCH_COMPILE_CACHE_KEY_TAG="unstep_speed_probe"
 )
 
 RUNNER="$SRC/unstep/run_wrapper_generation.py"
@@ -153,7 +153,7 @@ COMMON_ARGS=(
     --seed-mode sequential_global \
     --rng-skip-mode initial_only \
     --speed-only \
-    --fa3-import-backend h100 \
+    --fa3-import-backend auto \
     --source-uri "$SOURCE_URI" \
     --weights-uri "$WEIGHTS_URI" \
     --vae-uri "$VAE_URI" \
@@ -187,7 +187,7 @@ for ((i = 0; i < WARMUP_REPEATS; i++)); do
     echo "TRITON_CACHE_DIR=$CACHE/triton"
     echo "TRITON_HOME=$CACHE/triton"
     echo "CUDA_CACHE_PATH=$CACHE/cuda"
-    echo "TORCH_COMPILE_CACHE_KEY_TAG=unstep_h100_speed_probe"
+    echo "TORCH_COMPILE_CACHE_KEY_TAG=unstep_speed_probe"
     env "${COMMON_ENV[@]}" \
       "$PYENV/bin/python" "$RUNNER" \
         --run-name "$RUN" \
@@ -216,7 +216,7 @@ fi
   echo "TRITON_CACHE_DIR=$CACHE/triton"
   echo "TRITON_HOME=$CACHE/triton"
   echo "CUDA_CACHE_PATH=$CACHE/cuda"
-  echo "TORCH_COMPILE_CACHE_KEY_TAG=unstep_h100_speed_probe"
+  echo "TORCH_COMPILE_CACHE_KEY_TAG=unstep_speed_probe"
   env "${COMMON_ENV[@]}" \
     "$PYENV/bin/python" "$RUNNER" \
       --run-name "$RUN" \

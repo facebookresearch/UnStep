@@ -4,7 +4,7 @@
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
 
-"""Runtime knobs for the H100 speed environment."""
+"""Runtime settings for generation and speed measurement."""
 
 from __future__ import annotations
 

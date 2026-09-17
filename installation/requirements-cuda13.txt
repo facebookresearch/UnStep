@@ -1,4 +1,4 @@
-# NVIDIA CUDA 13.3 package set used by the verified H100 environment.
+# NVIDIA CUDA 13.3 package set used by the verified generation environment.
 # A system CUDA 13.3 + cuDNN 9.25 install can be used instead.
 
 cuda-toolkit==13.3.1

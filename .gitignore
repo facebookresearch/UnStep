@@ -1,5 +1,6 @@
 # Local environments and builds
 .venv/
+.vbench_deps/
 .build/
 .runtime_state/
 build/
