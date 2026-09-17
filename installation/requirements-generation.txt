@@ -33,7 +33,7 @@ omegaconf==2.3.1
 open_clip_torch==3.2.0
 packaging==26.3
 patchelf==0.19.1.0
-pillow==12.2.0
+pillow==12.3.0
 psutil==7.2.2
 PyYAML==6.0.3
 regex==2026.9.3
