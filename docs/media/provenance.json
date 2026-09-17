@@ -1,0 +1,130 @@
+{
+  "i2v": [
+    {
+      "sample_id": "0576",
+      "prompt": "a group of hot air balloons flying over a valley",
+      "reference_sha256": "cf78712e9839915590c1eb7410b6e89906f595e6b244ca66716a80051f2bc7cf",
+      "videos": {
+        "sf_original": {
+          "source_sha256": "fd67491ff766e17eaee4fdb685bdea71c7259065d248b14b54dd74745da0b951",
+          "web_sha256": "450c85aacf34a9a761b20ccce17c9a6d46375fdfdedd373a7b41cc2876960cb4"
+        },
+        "cf_original": {
+          "source_sha256": "557424f90078daccbf71d7d5307e488ef0dcc582449760ed2a4a55b5d91b88ff",
+          "web_sha256": "fcdc7d34d4d191ab11714422942a84ae4deaede3edb144447fe7f5264d8f1453"
+        },
+        "sf_unstep": {
+          "source_sha256": "81bfe3214ee6954f7e893fafedefbf20f0f5b1eef82984f7a2202e1a3627ec1b",
+          "web_sha256": "64fc6ab6d5feb458e37c6c369c71e989002673f343f1bf909fb304b574b1efe9"
+        },
+        "cf_unstep": {
+          "source_sha256": "69e3dd0d63d0d75e9440276e02fb4cb33de12093d98fe9b5b75eb06f9c772c03",
+          "web_sha256": "f316acfd37974d1df45da73ee8afa0752ccd336b44ce37e6e0d4bd4372025438"
+        }
+      }
+    },
+    {
+      "sample_id": "0890",
+      "prompt": "a yellow and white jellyfish is floating in the ocean",
+      "reference_sha256": "d21236815b0e00dbde4d41234980588051eae843d7195c26ac456f2c48b8ef49",
+      "videos": {
+        "sf_original": {
+          "source_sha256": "0b0b25225d26a15609e7227d2cd1fa190dae793f9212c612befc23148be072db",
+          "web_sha256": "c2aecf19d1d7eb1b8cd2ca115f0bd5ce9fc9ec491849be196ce6bda3b6cc7e02"
+        },
+        "cf_original": {
+          "source_sha256": "05f8fdffa08bbfe15815e48a2d485b50304d0ec978c31258ed06d1ab01bffbde",
+          "web_sha256": "361593e233bddced9ecb770bbf3f3322d3438654468e9e73639304063acf1e55"
+        },
+        "sf_unstep": {
+          "source_sha256": "7a0bddfa59c7504a1fec221b105c361cb95af6dbb61c10ebd7b22b712a0ae659",
+          "web_sha256": "504153ae1f295d62782fd1d40d3dad13cfe24984c070685caa98f161f1b19408"
+        },
+        "cf_unstep": {
+          "source_sha256": "dd50dbe41cd2cd615e430329d426b24e84ff5b25f4e823aebfc9783712c7d3bb",
+          "web_sha256": "9b697ceef9716a61f2a219839d6a42ef829368cff11456a3032e1ff56b98c588"
+        }
+      }
+    },
+    {
+      "sample_id": "0909",
+      "prompt": "a squirrel sitting on the ground eating a piece of bread",
+      "reference_sha256": "f2e4834429258f1811b93f0b0086b7f82579e26884a552bfb07abaa318add388",
+      "videos": {
+        "sf_original": {
+          "source_sha256": "f7c577b81e5c83d518a50e8019708fa9d1463877655c37fd8fa45be73cabce5a",
+          "web_sha256": "dfb4d9a3ecb1d4f3e0500c62a60e3e68e1cca888eb09d802670ef2465bcb76ad"
+        },
+        "cf_original": {
+          "source_sha256": "80b084f5d229576b1149cd9fbc17329b7141e2521553cb85b909b0dbcceb18a9",
+          "web_sha256": "e1f85272206ce2ce5d8f6c84ffba8b12df2b36a23dbda96844cfbc3e35ea03bc"
+        },
+        "sf_unstep": {
+          "source_sha256": "c19f489ee982d0cf989e131baea40698e0465f77a3062a43402c864ce783397a",
+          "web_sha256": "a10f843bea619e7b7fd6c6bb24be6f8393bd87fcb5db0463ab6682b5d64aa7f9"
+        },
+        "cf_unstep": {
+          "source_sha256": "ce09d698b9d641dc6df6de3322d78ba16d298b93f669e6145e810758116b4fa4",
+          "web_sha256": "518a146d720b76c27b1a4523e6305715ecf5048adf3453d26b813a162a25bb33"
+        }
+      }
+    },
+    {
+      "sample_id": "0953",
+      "prompt": "a close-up of a pink rose with water droplets on it",
+      "reference_sha256": "6e6edb62891c61c48231c3733bc83e2bb42707f9eeb37ce6138cc3fdde2c5224",
+      "videos": {
+        "sf_original": {
+          "source_sha256": "9e8ff30a36cfacac82de27e0bd8e88e147296d56670cd82799c713db4e8803af",
+          "web_sha256": "81822ed561ed0ec8dcc169af1e38f491ea8bf5691a2be4cd1ca999920b29b31a"
+        },
+        "cf_original": {
+          "source_sha256": "243b09ee49337375cf58231d9d80f87d5c7c985bfed7bf001956053e97c6e60f",
+          "web_sha256": "d85682d7c527a394d6990cea5399e42e27383071d3046557455fd2a426ed014a"
+        },
+        "sf_unstep": {
+          "source_sha256": "fee7dd152ae0e45b126b9d06e63edb0b8d391b031ba342aae911926dabd2cd31",
+          "web_sha256": "f2ecfb3e5354341ab0bfbbb1d31b59135831a9943600bc3c81fbaaab4b01652b"
+        },
+        "cf_unstep": {
+          "source_sha256": "e5bf4b7fc6f511427d258c4a4fcf0680bae6aaf7a7ba230928eb7740b0da4094",
+          "web_sha256": "c245aab579889cd560cdd120d69dd10194bf7f7c0cad94c2c798be73453891df"
+        }
+      }
+    }
+  ],
+  "t2v_frame_strips": [
+    {
+      "vbench_entry": 534,
+      "variant": "sf_unstep",
+      "sha256": "84e5a42f93504f10e9922441035f8384f93e9dd342bc00a346f524f63a8d0d61"
+    },
+    {
+      "vbench_entry": 719,
+      "variant": "sf_unstep",
+      "sha256": "0e791c7ed48d3028c127870d30ecc7b3131f4f21ae8e33e7bbd657c54ee56df8"
+    },
+    {
+      "vbench_entry": 702,
+      "variant": "sf_unstep",
+      "sha256": "4a33ba20e4f46f8bcbe9a85a683569aa449b047a6e7ae62ae2e8126b33f6cdfa"
+    },
+    {
+      "vbench_entry": 690,
+      "variant": "sf_unstep",
+      "sha256": "24c1b4f0f0c18bbf071c8a6106544bff670650b1bed6c8f13b934de869bd56ac"
+    }
+  ],
+  "figures": [
+    {
+      "figure": "method",
+      "source": "figures/method.pdf",
+      "sha256": "22cada6b76cb834b5f40a4158cc62e5a83a14f7784f5345a1dad03d4ae7f1b6f"
+    },
+    {
+      "figure": "results",
+      "source": "first tikzpicture in sections/intro.tex",
+      "tikz_sha256": "7ea940450067c402d7d666ac717cdee5c015c3bd54260871eedd90195069b4b1"
+    }
+  ]
+}
