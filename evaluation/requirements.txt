@@ -49,6 +49,6 @@ tabulate==0.10.0
 termcolor==3.3.0
 tifffile==2026.9.9
 timm==0.6.13
-transformers==4.57.1
+transformers==5.10.1
 tzdata==2026.3
 yacs==0.1.8
