@@ -6,7 +6,7 @@
 accelerate==1.10.1
 antlr4-python3-runtime==4.9.3
 anyio==4.15.1
-certifi==2026.7.22
+certifi==2026.10.18
 charset-normalizer==3.5.1
 click==8.5.0
 decord==0.6.0
