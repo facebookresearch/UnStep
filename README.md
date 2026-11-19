@@ -26,7 +26,7 @@ UnStep accelerates existing few-step causal video models based on Wan 2.1, entir
 
 **A new throughput regime on both H100 and GB200, entirely training-free.**
 
-![End-to-end throughput versus VBench quality on H100 and GB200, from Figure 1 of the UnStep paper.](media/results.png)
+![End-to-end throughput versus VBench quality on H100 and GB200, from Figure 1 of the UnStep paper.](media/results.png?v=8b570dee)
 
 ## Method
 
